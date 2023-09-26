@@ -5,8 +5,7 @@
   "main": "src/script.ts",
   "scripts": {
     "test": "npx jest",
-    "start": "ts-node src/script.ts",
-    "build": "tsc"
+    "start": "ts-node src/script.ts"
   },
   "author": "",
   "license": "ISC",

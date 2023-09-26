@@ -1,5 +1,4 @@
 // @ts-nocheck
-import main from "../../src/script";
 import PlansValidation from "../../src/utils/plans-validation";
 import {Data} from "../../src/interfaces/data-interface";
 
@@ -241,7 +240,7 @@ describe('PlansValidation', () => {
             ]
         }
 
-        expect(plansValidation.validation(data)).toEqual();
+        expect(plansValidation.validation(data)).toEqual(["{\"id\":6,\"type\":\"controle\",\"name\":\"Controle 2GB\",\"phonePrice\":2899,\"phonePriceOnPlan\":2229,\"installments\":12,\"monthlyFee\":44,\"schedule\":{\"startDate\":\"2055-05-23 00:00\"},\"locale\":{\"name\":\"BELO HORIZONTE\",\"priority\":3}}"]);
     });
 
 });

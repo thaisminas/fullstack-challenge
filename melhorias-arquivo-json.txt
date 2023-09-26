@@ -1,0 +1,8 @@
+Melhorias para o arquivo data.json
+
+
+* Alterar a chave "Aparelho" para o padrão americano em inglês. Sugestão de descrição "device".
+
+* Na chave "monthly_fee" alterar para camelCase, ficando como "monthlyFee".
+
+* Alterar a chave "localidade", "nome", "prioridade" para o padrão americano em inglês. Sugestão de descrição "locale", "name" e "priority".

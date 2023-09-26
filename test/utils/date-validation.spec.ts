@@ -1,9 +1,9 @@
-import ValidationDate from "../../src/utils/validation-date";
+import DateValidation from "../../src/utils/date-validation";
 import {Data} from "../../src/interfaces/data-interface";
 
-describe('ValidationDate', () => {
+describe('DateValidation', () => {
     it('should return true when a plan has a valid date', () => {
-        const validationDate = new ValidationDate();
+        const validationDate = new DateValidation();
 
         const inputData : Data = {
             "device" : {
@@ -35,7 +35,7 @@ describe('ValidationDate', () => {
     });
 
     it('should return false when a plan has an invalid date', () => {
-        const validationDate = new ValidationDate();
+        const validationDate = new DateValidation();
 
         const inputData : Data = {
             "device" : {

@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4accb01a-42cf-4625-af02-5b5243d6e3d4" name="Changes" comment="feat: add files and folders" />
+    <list default="true" id="4accb01a-42cf-4625-af02-5b5243d6e3d4" name="Changes" comment="feat: commit initial">
+      <change afterPath="$PROJECT_DIR$/melhorias-arquivo-json.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/plan-file.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/script.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/script.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/plans-validation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/plans-validation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validation-date.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/date-validation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/script.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/script.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/utils/date-validation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/utils/date-validation.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/utils/plans-validation.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/utils/plans-validation.spec.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +27,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="TypeScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -28,6 +41,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
@@ -44,56 +58,15 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/pages" />
       <recent name="$PROJECT_DIR$/src/types" />
       <recent name="$PROJECT_DIR$/src/utils" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/validations" />
-      <recent name="$PROJECT_DIR$/files" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
-    <configuration name="Deve retornar o plano mais recente quando a prioridade é igual" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/test/utils/plansValidation.spec.ts" />
-      <test-names>
-        <test-name value="Deve retornar o plano mais recente quando a prioridade é igual" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="PlansValidation.Should validate and return a list of plans" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/test/utils/plansValidation.spec.ts" />
-      <test-names>
-        <test-name value="PlansValidation" />
-        <test-name value="Should validate and return a list of plans" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="PlansValidation.deve retornar uma lista de planos corretamente" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/test/script.test.ts" />
-      <test-names>
-        <test-name value="PlansValidation" />
-        <test-name value="deve retornar uma lista de planos corretamente" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="script.deve retornar uma lista de planos corretamente" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.test">
+    <configuration name="script.should not return a list of plans correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
@@ -103,15 +76,57 @@
       <test-file value="$PROJECT_DIR$/test/script.test.ts" />
       <test-names>
         <test-name value="script" />
-        <test-name value="deve retornar uma lista de planos corretamente" />
+        <test-name value="should not return a list of plans correctly" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="script.should not return a list of plans when the date entered is greater than the current date" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/script.test.ts" />
+      <test-names>
+        <test-name value="script" />
+        <test-name value="should not return a list of plans when the date entered is greater than the current date" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="script.should not return a list of plans when the date entered is greater than the" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/script.test.ts" />
+      <test-names>
+        <test-name value="script" />
+        <test-name value="should not return a list of plans when the date entered is greater than the" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="script.should return a list of plans correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/script.test.ts" />
+      <test-names>
+        <test-name value="script" />
+        <test-name value="should return a list of plans correctly" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="start" />
+        <script value="test" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -119,11 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
-        <item itemvalue="Jest.PlansValidation.Should validate and return a list of plans" />
-        <item itemvalue="Jest.script.deve retornar uma lista de planos corretamente" />
-        <item itemvalue="Jest.PlansValidation.deve retornar uma lista de planos corretamente" />
-        <item itemvalue="Jest.Deve retornar o plano mais recente quando a prioridade é igual" />
+        <item itemvalue="npm.test" />
+        <item itemvalue="Jest.script.should not return a list of plans when the date entered is greater than the current date" />
+        <item itemvalue="Jest.script.should return a list of plans correctly" />
+        <item itemvalue="Jest.script.should not return a list of plans when the date entered is greater than the" />
+        <item itemvalue="Jest.script.should not return a list of plans correctly" />
       </list>
     </recent_temporary>
   </component>
@@ -141,6 +156,9 @@
       <workItem from="1695684467926" duration="9357000" />
       <workItem from="1695722246873" duration="6461000" />
       <workItem from="1695742625562" duration="2577000" />
+      <workItem from="1695753277024" duration="655000" />
+      <workItem from="1695754082261" duration="1026000" />
+      <workItem from="1695762079039" duration="5019000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add files and folders">
       <created>1695420801294</created>
@@ -149,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695420801294</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: commit initial">
+      <created>1695753333355</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695753333355</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,14 +182,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: add files and folders" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add files and folders" />
+    <MESSAGE value="feat: commit initial" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: commit initial" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/script.ts</url>
-          <line>8</line>
+          <line>9</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -174,28 +200,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/utils/plans-validation.ts</url>
-          <line>11</line>
+          <line>10</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/utils/plans-validation.ts</url>
-          <line>22</line>
+          <line>20</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/utils/validation-date.ts</url>
+          <url>file://$PROJECT_DIR$/src/utils/date-validation.ts</url>
           <line>4</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/utils/plans-validation.ts</url>
-          <line>26</line>
+          <line>24</line>
           <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/test/script.test.ts</url>
-          <line>49</line>
-          <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/script.ts</url>
@@ -203,8 +224,8 @@
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/test/utils/plans-validation.spec.ts</url>
-          <line>246</line>
+          <url>file://$PROJECT_DIR$/src/script.ts</url>
+          <line>12</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="36" />
         </line-breakpoint>

@@ -1,23 +1,23 @@
 // @ts-nocheck
-import ValidationDate from "./utils/validation-date";
+import DateValidation from "./utils/date-validation";
 import { data } from '../files/data';
 import PlansValidation from "./utils/plans-validation";
 import * as fs from 'fs';
 import * as path from "path";
+import {Data} from "./interfaces/data-interface";
 
-export default function main(){
-    const validationDate = new ValidationDate();
+export default function main(data: Data){
+    const validationDate = new DateValidation();
     const plansValidation = new PlansValidation();
 
     if(!validationDate.isValidDate(data)) {
         return {
-            'message': 'Data reported is not validated!',
+            'message': 'Date reported not is valid!',
         }
     }
 
-    const planList = plansValidation.validation(data).join();
-
-    const directory = path.join('./files', 'plan-file.txt');
+    const planList = JSON.stringify(plansValidation.validation(data));
+    const directory = path.join('./files', 'plans-list-file.json');
 
     fs.writeFile(directory, planList, (err) => {
         if (err) {
@@ -29,4 +29,4 @@ export default function main(){
     return planList;
 }
 
-main();
+main(data);

@@ -7,7 +7,6 @@ export default class PlansValidation {
         const planMap = this.combineIdenticalPlans(plans);
         return this.orderPlans(planMap);
     }
-
     private combineIdenticalPlans(plans: Plans): Map {
         const planMap = new Map();
         plans.forEach((plan) => {
@@ -18,7 +17,6 @@ export default class PlansValidation {
         });
         return planMap;
     }
-
     private orderPlans(planMap): plansReturnType {
         let planList = [planMap.values()];
         const plan = Array.from(planList[0]);
