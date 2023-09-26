@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Este projeto é parte do desafio para a posição de Fullstack Developer na 4YouSee. O desafio consiste em criar um programa que filtra uma lista de planos com base em critérios específicos e retorna a lista filtrada.
+O desafio consiste em criar um programa que filtra uma lista de planos com base em critérios específicos e retorna a lista filtrada.
 
 ## Tecnologias Utilizadas
 - 🧩 **Tecnologias**
@@ -12,7 +12,7 @@ Este projeto é parte do desafio para a posição de Fullstack Developer na 4You
     - [Jest](https://jestjs.io/pt-BR/docs/getting-started)
 
 
-# Comandos para executar o projeto
+## Comandos para executar o projeto
 
 
 1. Clone o repositório do GitHub:
@@ -52,7 +52,16 @@ Este projeto é parte do desafio para a posição de Fullstack Developer na 4You
   * `script.ts`: é o arquivo que contém a função principal do projeto, responsável por chamar outras classes e executar a geração do arquivo `.json` com os dados de retorno conforme as regras do desafio.
 * A pasta `files` contém arquivos JSON que são utilizados e gerados pela aplicação. O arquivo `data.ts` contém o JSON a ser validado e os planos a serem filtrados. O arquivo `plans-list-file.json` é gerado pela aplicação de acordo com as regras definidas no desafio.
 * A pasta `test` contém testes unitários que validam as regras do código.
-* No arquivo `melhorias-arquivo-json.txt` foi adicionado informações de sugestão para melhoria do arquivo `data.ts`.
+
+<br/><br/>
+
+## Melhorias para o arquivo JSON disponibilizado
+* Alterar a chave `Aparelho` para o padrão americano em inglês. Sugestão de descrição `device`.
+
+* Na chave `monthly_fee` alterar para camelCase, ficando como `monthlyFee`.
+
+* Alterar a chave `localidade`, `nome`, `prioridade` para o padrão americano em inglês. Sugestão de descrição `locale`, `name` e `priority`.
+
 
 <br/><br/>
 

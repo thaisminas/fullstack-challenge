@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4accb01a-42cf-4625-af02-5b5243d6e3d4" name="Changes" comment="feat: commit initial">
-      <change afterPath="$PROJECT_DIR$/melhorias-arquivo-json.txt" afterDir="false" />
+    <list default="true" id="4accb01a-42cf-4625-af02-5b5243d6e3d4" name="Changes" comment="test: add unit tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/plan-file.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/script.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/script.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/melhorias-arquivo-json.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/plans-validation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/plans-validation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/validation-date.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/date-validation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/script.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/script.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/utils/date-validation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/utils/date-validation.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/utils/plans-validation.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/utils/plans-validation.spec.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +151,7 @@
       <workItem from="1695742625562" duration="2577000" />
       <workItem from="1695753277024" duration="655000" />
       <workItem from="1695754082261" duration="1026000" />
-      <workItem from="1695762079039" duration="5019000" />
+      <workItem from="1695762079039" duration="6504000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add files and folders">
       <created>1695420801294</created>
@@ -174,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695753333355</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="test: add unit tests">
+      <created>1695767413689</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695767413689</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,7 +183,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: add files and folders" />
     <MESSAGE value="feat: commit initial" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: commit initial" />
+    <MESSAGE value="test: add unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: add unit tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

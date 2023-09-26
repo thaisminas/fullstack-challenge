@@ -4,10 +4,10 @@ import {plansReturnType} from "../types/plans-return-type";
 
 export default class PlansValidation {
     public validation({ plans }: Data): plansReturnType[] {
-        const planMap = this.combineIdenticalPlans(plans);
-        return this.orderPlans(planMap);
+        const filteredPlans = this.filterPlans(plans);
+        return this.orderPlans(filteredPlans);
     }
-    private combineIdenticalPlans(plans: Plans): Map {
+    private filterPlans(plans: Plans): Map {
         const planMap = new Map();
         plans.forEach((plan) => {
             if (!planMap.has(plan.name) && !planMap.has(plan.id)) {
@@ -17,23 +17,23 @@ export default class PlansValidation {
         });
         return planMap;
     }
-    private orderPlans(planMap): plansReturnType {
-        let planList = [planMap.values()];
-        const plan = Array.from(planList[0]);
+    private orderPlans(filteredPlans: Map): plansReturnType {
+        let orderedPlans = [filteredPlans.values()];
+        const plans = Array.from(orderedPlans[0]);
 
-        plan.forEach((plan) => {
+        plans.forEach((plan) => {
             let planPriority = plan.sort((a, b) => {
-                if(b.locale.priority === a.locale.priority){
+                if(b.locale.priority === a.locale.priority) {
                     return new Date(b.schedule.startDate) > new Date(a.schedule.startDate) ? 1 : -1;
                 }
                 return b.locale.priority - a.locale.priority;
             });
 
-            planList.push(JSON.stringify(planPriority[0]));
+            orderedPlans.push(JSON.stringify(planPriority[0]));
         })
-        planList.shift()
-        return planList;
-    }
+        orderedPlans.shift();
+        return orderedPlans;
+    };
 
 };
 
