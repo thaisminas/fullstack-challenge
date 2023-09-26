@@ -156,7 +156,7 @@ describe('script', () => {
             ],
         };
         const expectedOutput = {
-            'message': 'Date reported not is valid!',
+            message: 'Date reported not is valid!',
         };
 
         const result = main(inputData)

@@ -12,7 +12,7 @@ export default function main(data: Data){
 
     if(!validationDate.isValidDate(data)) {
         return {
-            'message': 'Date reported not is valid!',
+            message: 'Date reported not is valid!',
         }
     }
 
