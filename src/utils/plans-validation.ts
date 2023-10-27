@@ -3,38 +3,54 @@ import {Data, Plans} from '../interfaces/data-interface';
 import {plansReturnType} from "../types/plans-return-type";
 
 export default class PlansValidation {
+    /**
+     * Validação dos planos
+     * @param data - Dados contendo os planos
+     * @returns Array com os planos ordenados
+     */
     public validation({ plans }: Data): plansReturnType[] {
-        const filteredPlans = this.filterPlans(plans);
-        return this.orderPlans(filteredPlans);
+        return this.orderPlans(this.filterPlans(plans));
     }
-    private filterPlans(plans: Plans): Map {
-        const planMap = new Map();
+
+    /**
+     * Filtra os planos e agrupa-os pelo nome
+     * @param plans - Array com os planos
+     * @returns Mapa com os planos agrupados pelo nome
+     */
+    private filterPlans(plans: Plans[]): Map<string, Plans[]> {
+        const planMap = new Map<string, Plans[]>();
         plans.forEach((plan) => {
-            if (!planMap.has(plan.name) && !planMap.has(plan.id)) {
-                planMap.set(plan.name, []);
-            }
-            planMap.get(plan.name).push(plan);
+            const planArray = planMap.get(plan.name) || [];
+            planArray.push(plan);
+            planMap.set(plan.name, planArray);
         });
         return planMap;
     }
-    private orderPlans(filteredPlans: Map): plansReturnType {
-        let orderedPlans = [filteredPlans.values()];
-        const plans = Array.from(orderedPlans[0]);
-
-        plans.forEach((plan) => {
-            let planPriority = plan.sort((a, b) => {
-                if(b.locale.priority === a.locale.priority) {
-                    return new Date(b.schedule.startDate) > new Date(a.schedule.startDate) ? 1 : -1;
-                }
-                return b.locale.priority - a.locale.priority;
-            });
-
-            orderedPlans.push(JSON.stringify(planPriority[0]));
-        })
-        orderedPlans.shift();
+    /**
+     * Ordena os planos de acordo com a prioridade e a inputData de início
+     * @param filteredPlans - Mapa com os planos agrupados pelo nome
+     * @returns Array com os planos ordenados
+     */
+    private orderPlans(filteredPlans: Map<string, Plans[]>): plansReturnType[] {
+        const orderedPlans: plansReturnType[] = [];
+        filteredPlans.forEach((plans) => {
+            const sortedPlans = plans.sort(this.comparePlans);
+            orderedPlans.push(JSON.stringify(sortedPlans[0]));
+        });
         return orderedPlans;
-    };
-
+    }
+    /**
+     * Função de comparação para ordenar os planos
+     * @param a - Primeiro plano a ser comparado
+     * @param b - Segundo plano a ser comparado
+     * @returns Valor negativo se a < b, valor positivo se a > b, ou zero se a = b
+     */
+    private comparePlans(a: Plans, b: Plans): number {
+        if (b.locale.priority === a.locale.priority) {
+            return new Date(b.schedule.startDate) > new Date(a.schedule.startDate) ? 1 : -1;
+        }
+        return b.locale.priority - a.locale.priority;
+    }
 };
 
 

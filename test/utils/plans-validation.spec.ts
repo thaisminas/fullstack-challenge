@@ -117,7 +117,7 @@ describe('PlansValidation', () => {
         ]);
     });
 
-    test("Should return the plan with the latest data when the priority of all plans is equal", function () {
+    test("Should return the plan with the latest inputData when the priority of all plans is equal", function () {
         const plansValidation = new PlansValidation()
 
         const data : Data = {
@@ -181,7 +181,7 @@ describe('PlansValidation', () => {
         ]);
     });
 
-    test("Should return the plan with the latest data when the priority of all plans ", function () {
+    test("Should return the plan with the latest inputData when the priority of all plans ", function () {
         const plansValidation = new PlansValidation()
 
         const data : Data = {

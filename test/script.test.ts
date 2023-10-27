@@ -2,7 +2,7 @@ import {Data} from "../src/interfaces/data-interface";
 import main from "../src/script";
 
 describe('script', () => {
-    it('should return a list of plans correctly', () => {
+    it('should return a list of plans correctly',  async () => {
         const inputData: Data = {
             "device" : {
                 "name": "Samsung Galaxy S8"
@@ -107,14 +107,14 @@ describe('script', () => {
             ]
         };
         const expectedOutput = "[\"{\\\"id\\\":3,\\\"type\\\":\\\"pos\\\",\\\"name\\\":\\\"Família 50GB\\\",\\\"phonePrice\\\":2899,\\\"phonePriceOnPlan\\\":2229,\\\"installments\\\":12,\\\"monthlyFee\\\":499,\\\"schedule\\\":{\\\"startDate\\\":\\\"2019-05-23 00:00\\\"},\\\"locale\\\":{\\\"name\\\":\\\"BELO HORIZONTE\\\",\\\"priority\\\":3}}\",\"{\\\"id\\\":6,\\\"type\\\":\\\"controle\\\",\\\"name\\\":\\\"Controle 2GB\\\",\\\"phonePrice\\\":2899,\\\"phonePriceOnPlan\\\":2229,\\\"installments\\\":12,\\\"monthlyFee\\\":44,\\\"schedule\\\":{\\\"startDate\\\":\\\"2019-05-23 00:00\\\"},\\\"locale\\\":{\\\"name\\\":\\\"BELO HORIZONTE\\\",\\\"priority\\\":3}}\"]";
-        const result = main(inputData)
+        const result = await main(inputData)
         expect(inputData.plans[0].locale.priority).toEqual(1);
         expect(inputData.plans[1].locale.priority).toEqual(2);
         expect(inputData.plans[2].locale.priority).toEqual(3);
         expect(result).toEqual(expectedOutput);
     });
 
-    it('should not return a list of plans when the date entered is greater than the current date', () => {
+    it('should not return a list of plans when the date entered is greater than the current date', async () => {
         const inputData: Data = {
             device: {
                 name: 'Samsung',
@@ -156,17 +156,17 @@ describe('script', () => {
             ],
         };
         const expectedOutput = {
-            message: 'Date reported not is valid!',
+            message: 'Date reported is not valid!',
         };
 
-        const result = main(inputData)
+        const result = await main(inputData)
         expect(inputData.plans[0].locale.priority).toEqual(3);
         expect(inputData.plans[1].locale.priority).toEqual(2);
         expect(inputData.plans[2].locale.priority).toEqual(1);
         expect(result).toEqual(expectedOutput);
     });
 
-    it('should return a list of plans with the most recent date when they have equal priority', () => {
+    it('should return a list of plans with the most recent date when they have equal priority', async () => {
         const inputData: Data = {
             device: {
                 name: 'Samsung',
@@ -209,7 +209,7 @@ describe('script', () => {
         };
         const expectedOutput = "[\"{\\\"id\\\":3,\\\"type\\\":\\\"pos\\\",\\\"phonePrice\\\":2899,\\\"phonePriceOnPlan\\\":2229,\\\"installments\\\":12,\\\"monthlyFee\\\":499,\\\"name\\\":\\\"Plano A\\\",\\\"locale\\\":{\\\"name\\\":\\\"Cidade A\\\",\\\"priority\\\":3},\\\"schedule\\\":{\\\"startDate\\\":\\\"2023-09-26\\\"}}\",\"{\\\"id\\\":2,\\\"type\\\":\\\"controle\\\",\\\"phonePrice\\\":2899,\\\"phonePriceOnPlan\\\":2229,\\\"installments\\\":12,\\\"monthlyFee\\\":499,\\\"name\\\":\\\"Plano B\\\",\\\"locale\\\":{\\\"name\\\":\\\"Cidade B\\\",\\\"priority\\\":3},\\\"schedule\\\":{\\\"startDate\\\":\\\"2021-09-24\\\"}}\"]";
 
-        const result = main(inputData)
+        const result = await main(inputData)
         expect(inputData.plans[0].locale.priority).toEqual(1);
         expect(inputData.plans[1].locale.priority).toEqual(3);
         expect(inputData.plans[2].locale.priority).toEqual(3);

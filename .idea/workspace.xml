@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4accb01a-42cf-4625-af02-5b5243d6e3d4" name="Changes" comment="docs: change description README">
+    <list default="true" id="4accb01a-42cf-4625-af02-5b5243d6e3d4" name="Changes" comment="refactor: change description chave object">
+      <change afterPath="$PROJECT_DIR$/files/input-data.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/generate-file.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/data.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/script.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/script.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/date-validation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/date-validation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/plans-validation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/plans-validation.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/script.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/script.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/utils/date-validation.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/utils/date-validation.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/utils/plans-validation.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/utils/plans-validation.spec.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript File" />
         <option value="HTML File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -50,25 +58,24 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/utils" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/pages" />
       <recent name="$PROJECT_DIR$/src/types" />
-      <recent name="$PROJECT_DIR$/src/utils" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test">
-    <configuration name="script.should not return a list of plans correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.script.should return a list of plans correctly">
+    <configuration name="script" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="TEST" />
+      <scope-kind value="SUITE" />
       <test-file value="$PROJECT_DIR$/test/script.test.ts" />
       <test-names>
         <test-name value="script" />
-        <test-name value="should not return a list of plans correctly" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -86,20 +93,6 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="script.should not return a list of plans when the date entered is greater than the" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/test/script.test.ts" />
-      <test-names>
-        <test-name value="script" />
-        <test-name value="should not return a list of plans when the date entered is greater than the" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <configuration name="script.should return a list of plans correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -111,6 +104,20 @@
       <test-names>
         <test-name value="script" />
         <test-name value="should return a list of plans correctly" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="script.should return a list of plans with the most recent date when they have equal priority" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/script.test.ts" />
+      <test-names>
+        <test-name value="script" />
+        <test-name value="should return a list of plans with the most recent date when they have equal priority" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -126,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.test" />
-        <item itemvalue="Jest.script.should not return a list of plans when the date entered is greater than the current date" />
         <item itemvalue="Jest.script.should return a list of plans correctly" />
-        <item itemvalue="Jest.script.should not return a list of plans when the date entered is greater than the" />
-        <item itemvalue="Jest.script.should not return a list of plans correctly" />
+        <item itemvalue="Jest.script" />
+        <item itemvalue="Jest.script.should return a list of plans with the most recent date when they have equal priority" />
+        <item itemvalue="Jest.script.should not return a list of plans when the date entered is greater than the current date" />
+        <item itemvalue="npm.test" />
       </list>
     </recent_temporary>
   </component>
@@ -150,7 +157,14 @@
       <workItem from="1695742625562" duration="2577000" />
       <workItem from="1695753277024" duration="655000" />
       <workItem from="1695754082261" duration="1026000" />
-      <workItem from="1695762079039" duration="7332000" />
+      <workItem from="1695762079039" duration="7428000" />
+      <workItem from="1696097297112" duration="873000" />
+      <workItem from="1696163140718" duration="168000" />
+      <workItem from="1696182466490" duration="408000" />
+      <workItem from="1696207378135" duration="122000" />
+      <workItem from="1696290000567" duration="444000" />
+      <workItem from="1697762138389" duration="3423000" />
+      <workItem from="1698363398107" duration="1767000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add files and folders">
       <created>1695420801294</created>
@@ -180,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695769688183</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="refactor: change description chave object">
+      <created>1695771734164</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695771734164</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,51 +212,37 @@
     <MESSAGE value="feat: commit initial" />
     <MESSAGE value="test: add unit tests" />
     <MESSAGE value="docs: change description README" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: change description README" />
+    <MESSAGE value="refactor: change description chave object" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: change description chave object" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/script.ts</url>
-          <line>9</line>
+          <line>6</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/utils/plans-validation.ts</url>
-          <line>6</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/utils/plans-validation.ts</url>
-          <line>10</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/utils/plans-validation.ts</url>
-          <line>20</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/utils/date-validation.ts</url>
-          <line>4</line>
+          <line>7</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/utils/plans-validation.ts</url>
-          <line>24</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/script.ts</url>
-          <line>28</line>
+          <line>20</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/utils/generate-file.ts</url>
+          <line>8</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/script.ts</url>
-          <line>12</line>
+          <line>18</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="36" />
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

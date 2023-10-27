@@ -1,32 +1,20 @@
 // @ts-nocheck
 import DateValidation from "./utils/date-validation";
-import { data } from '../files/data';
-import PlansValidation from "./utils/plans-validation";
-import * as fs from 'fs';
-import * as path from "path";
+import {inputData} from '../files/input-data';
 import {Data} from "./interfaces/data-interface";
+import {GenerateFile} from "./utils/generate-file";
 
-export default function main(data: Data){
+export default async function main(data: Data) {
     const validationDate = new DateValidation();
-    const plansValidation = new PlansValidation();
+    const generateFile = new GenerateFile();
 
-    if(!validationDate.isValidDate(data)) {
+    if (!validationDate.areAllPlanStartDatesValid(data)) {
         return {
-            message: 'Date reported not is valid!',
-        }
+            message: 'Date reported is not valid!',
+        };
     }
 
-    const planList = JSON.stringify(plansValidation.validation(data));
-    const directory = path.join('./files', 'plans-list-file.json');
-
-    fs.writeFile(directory, planList, (err) => {
-        if (err) {
-            console.error('Error writing to file:', err);
-        }
-        console.log(`Content successfully written to file, ${directory}`)
-    });
-
-    return planList;
+    return  await generateFile.create(data);
 }
 
-main(data);
+main(inputData);

@@ -29,7 +29,7 @@ describe('DateValidation', () => {
             ]
         }
 
-        const result = validationDate.isValidDate(inputData);
+        const result = validationDate.areAllPlanStartDatesValid(inputData);
 
         expect(result).toBe(true);
     });
@@ -61,7 +61,7 @@ describe('DateValidation', () => {
             ]
         }
 
-        const result = validationDate.isValidDate(inputData);
+        const result = validationDate.areAllPlanStartDatesValid(inputData);
 
         expect(result).toBe(false);
     });
